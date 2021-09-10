@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap");
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.font-pixel {
+  font-family: "Press Start 2P", cursive;
+}
+
+.font-archivo {
+  font-family: "Archivo Black", sans-serif;
 }
