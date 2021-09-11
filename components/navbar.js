@@ -92,13 +92,14 @@ export default function Navbar({ children }) {
         </div>
       </div>
       {!collapsed ? (
-        <div className="w-full flex flex-col space-y-2 text-xl mt-4">
+        <div className="w-screen flex flex-col text-xl -ml-4 -mb-4 mt-4">
           {links.map((link, index) => (
             <NavLink
               href={link.href}
               icon={link.icon}
               key={`drop-nav-link-${index}`}
               selected={isOnPage(link.href)}
+              className="p-2 odd:bg-[#ebecee] dark:odd:bg-[#131b2c]"
             >
               {link.name}
             </NavLink>
