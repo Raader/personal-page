@@ -10,13 +10,17 @@ import {
 import { SunIcon } from "@heroicons/react/outline";
 import Anchor from "./anchor";
 import Brand from "./brand";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "./button";
 import IconText from "./icon_text";
 import NavLink from "./nav_link";
+import ThemeContext from "./theme_context";
+import { useRouter } from "next/dist/client/router";
 
 export default function Navbar({ children }) {
+  const router = useRouter();
   const [collapsed, setCollapsed] = useState(true);
+  const { accentColor } = useContext(ThemeContext);
   const links = [
     {
       name: "Home",
@@ -25,32 +29,38 @@ export default function Navbar({ children }) {
     },
     {
       name: "Projects",
-      href: "/",
+      href: "/projects",
       icon: <FolderIcon className="w-5 h-5 xl:w-6 xl:h-6"></FolderIcon>,
     },
     {
       name: "Articles",
-      href: "/",
+      href: "/posts",
       icon: (
         <DocumentTextIcon className="w-5 h-5 xl:w-6 xl:h-6"></DocumentTextIcon>
       ),
     },
     {
       name: "About",
-      href: "/",
+      href: "/about",
       icon: (
         <IdentificationIcon className="w-5 h-5 xl:w-6 xl:h-6"></IdentificationIcon>
       ),
     },
     {
       name: "Contact",
-      href: "/",
+      href: "/contact",
       icon: <MailIcon className="w-5 h-5 xl:w-6 xl:h-6"></MailIcon>,
     },
   ];
 
+  const isOnPage = (path) =>
+    router.pathname === path ||
+    (path !== "/" && router.pathname.startsWith(path));
   return (
-    <nav className="w-full p-4 md:p-6 border-b-4 border-yellow-300">
+    <nav
+      className={`w-full p-4 md:p-6 border-b-4`}
+      style={{ borderColor: accentColor }}
+    >
       <div className="container mx-auto flex items-center">
         <Brand></Brand>
         <div className="mx-16 hidden md:flex md:space-x-8 text-lg xl:text-xl">
@@ -59,6 +69,7 @@ export default function Navbar({ children }) {
               href={link.href}
               icon={link.icon}
               key={`nav-link-${index}`}
+              selected={isOnPage(link.href)}
             >
               {link.name}
             </NavLink>
@@ -87,6 +98,7 @@ export default function Navbar({ children }) {
               href={link.href}
               icon={link.icon}
               key={`drop-nav-link-${index}`}
+              selected={isOnPage(link.href)}
             >
               {link.name}
             </NavLink>
