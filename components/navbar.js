@@ -34,7 +34,7 @@ export default function Navbar({ children }) {
     },
     {
       name: "Articles",
-      href: "/posts",
+      href: "/articles",
       icon: (
         <DocumentTextIcon className="w-5 h-5 xl:w-6 xl:h-6"></DocumentTextIcon>
       ),

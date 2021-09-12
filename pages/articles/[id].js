@@ -5,7 +5,7 @@ import ThemeContext from "../../components/theme_context";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 
-export default function Post({ post }) {
+export default function Article({ post }) {
   return (
     <>
       <Head>

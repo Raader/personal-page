@@ -8,7 +8,7 @@ import ThemeContext from "../../components/theme_context";
 import { getAllPosts } from "../../lib/posts";
 import Head from "next/head";
 
-export default function PostsPage({ posts }) {
+export default function Articles({ posts }) {
   const { accentColor } = useContext(ThemeContext);
   return (
     <>
@@ -23,7 +23,7 @@ export default function PostsPage({ posts }) {
               {posts.map((post, index) => (
                 <div key={`post-${index}`}>
                   <div className="flex items-baseline flex-nowrap justify-between">
-                    <Anchor href={`/posts/${post.id}`}>
+                    <Anchor href={`/articles/${post.id}`}>
                       <h3>{post.title}</h3>
                     </Anchor>
                     <FormattedDate>{post.date}</FormattedDate>
