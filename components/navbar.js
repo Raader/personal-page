@@ -16,6 +16,7 @@ import IconText from "./icon_text";
 import NavLink from "./nav_link";
 import ThemeContext from "./theme_context";
 import { useRouter } from "next/dist/client/router";
+import LightSwitch from "./light_switch";
 
 export default function Navbar({ children }) {
   const router = useRouter();
@@ -77,12 +78,7 @@ export default function Navbar({ children }) {
         </div>
 
         <div className="ml-auto flex space-x-4">
-          <Button
-            className="block"
-            onClick={() => document.documentElement.classList.toggle("dark")}
-          >
-            <SunIcon className="w-8 h-8"></SunIcon>
-          </Button>
+          <LightSwitch></LightSwitch>
           <Button
             className="md:hidden"
             onClick={() => setCollapsed((prev) => !prev)}
