@@ -35,7 +35,7 @@ export default function Articles({ posts }) {
                   ></div>
 
                   <Anchor
-                    href={`/posts/${post.id}`}
+                    href={`/articles/${post.id}`}
                     style={{ color: accentColor }}
                   >
                     Read More
