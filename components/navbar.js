@@ -58,7 +58,7 @@ export default function Navbar({ children }) {
     (path !== "/" && router.pathname.startsWith(path));
   return (
     <nav
-      className={`w-full p-4 md:p-5 xl:p-6 border-b-4`}
+      className={`w-full p-4 md:p-5 xl:p-6 border-b-4 mb-4 xl:mb-10`}
       style={{ borderColor: accentColor }}
     >
       <div className="container mx-auto flex items-center">
