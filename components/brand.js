@@ -8,12 +8,7 @@ export default function Brand() {
       className={`text-3xl xl:text-4xl font-archivo uppercase`}
       style={{ color: accentColor }}
     >
-      <span>r</span>
-      <span>a</span>
-      <span>a</span>
-      <span>d</span>
-      <span>e</span>
-      <span>r</span>
+      Efe ağca
     </div>
   );
 }
