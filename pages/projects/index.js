@@ -6,7 +6,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Head>
-        <title>Projects | Raader</title>
+        <title>Projects | Efe Ağca</title>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#34D399" }}>
         <Layout></Layout>

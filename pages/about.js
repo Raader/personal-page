@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About | Raader</title>
+        <title>About | Efe Ağca</title>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#818CF8" }}>
         <Layout></Layout>

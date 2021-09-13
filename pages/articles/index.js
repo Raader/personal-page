@@ -13,7 +13,7 @@ export default function Articles({ posts }) {
   return (
     <>
       <Head>
-        <title>Articles | Raader</title>
+        <title>Articles | Efe Ağca</title>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#FBBF24" }}>
         <Layout>

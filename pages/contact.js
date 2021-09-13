@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact | Raader</title>
+        <title>Contact | Efe Ağca</title>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#F87171" }}>
         <Layout></Layout>
