@@ -18,41 +18,42 @@ import ThemeContext from "./theme_context";
 import { useRouter } from "next/dist/client/router";
 import LightSwitch from "./light_switch";
 
+const navigationLinks = [
+  {
+    name: "Home",
+    href: "/",
+    icon: <HomeIcon className="w-5 h-5 xl:w-6 xl:h-6"></HomeIcon>,
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+    icon: <FolderIcon className="w-5 h-5 xl:w-6 xl:h-6"></FolderIcon>,
+  },
+  {
+    name: "Articles",
+    href: "/articles",
+    icon: (
+      <DocumentTextIcon className="w-5 h-5 xl:w-6 xl:h-6"></DocumentTextIcon>
+    ),
+  },
+  {
+    name: "About",
+    href: "/about",
+    icon: (
+      <IdentificationIcon className="w-5 h-5 xl:w-6 xl:h-6"></IdentificationIcon>
+    ),
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+    icon: <MailIcon className="w-5 h-5 xl:w-6 xl:h-6"></MailIcon>,
+  },
+];
+
 export default function Navbar({ children }) {
   const router = useRouter();
   const [collapsed, setCollapsed] = useState(true);
   const { accentColor } = useContext(ThemeContext);
-  const links = [
-    {
-      name: "Home",
-      href: "/",
-      icon: <HomeIcon className="w-5 h-5 xl:w-6 xl:h-6"></HomeIcon>,
-    },
-    {
-      name: "Projects",
-      href: "/projects",
-      icon: <FolderIcon className="w-5 h-5 xl:w-6 xl:h-6"></FolderIcon>,
-    },
-    {
-      name: "Articles",
-      href: "/articles",
-      icon: (
-        <DocumentTextIcon className="w-5 h-5 xl:w-6 xl:h-6"></DocumentTextIcon>
-      ),
-    },
-    {
-      name: "About",
-      href: "/about",
-      icon: (
-        <IdentificationIcon className="w-5 h-5 xl:w-6 xl:h-6"></IdentificationIcon>
-      ),
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-      icon: <MailIcon className="w-5 h-5 xl:w-6 xl:h-6"></MailIcon>,
-    },
-  ];
 
   const isOnPage = (path) =>
     router.pathname === path ||
@@ -65,7 +66,7 @@ export default function Navbar({ children }) {
       <div className="container mx-auto flex items-center">
         <Brand></Brand>
         <div className="mx-16 hidden md:flex md:space-x-8 text-lg xl:text-xl">
-          {links.map((link, index) => (
+          {navigationLinks.map((link, index) => (
             <NavLink
               href={link.href}
               icon={link.icon}
@@ -89,7 +90,7 @@ export default function Navbar({ children }) {
       </div>
       {!collapsed ? (
         <div className="w-screen flex flex-col text-xl -ml-4 -mb-4 mt-4">
-          {links.map((link, index) => (
+          {navigationLinks.map((link, index) => (
             <NavLink
               href={link.href}
               icon={link.icon}
