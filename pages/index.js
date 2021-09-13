@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Raader</title>
+        <title>Efe Ağca | Personal Page</title>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout></Layout>
