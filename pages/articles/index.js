@@ -30,7 +30,7 @@ export default function Articles({ posts }) {
                   </div>
 
                   <div
-                    dangerouslySetInnerHTML={{ __html: post.content }}
+                    dangerouslySetInnerHTML={{ __html: post.preview }}
                     className="-my-4 "
                   ></div>
 
