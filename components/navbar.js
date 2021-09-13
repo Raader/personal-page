@@ -1,18 +1,14 @@
 import {
   DocumentTextIcon,
-  FolderAddIcon,
   FolderIcon,
   HomeIcon,
   IdentificationIcon,
   MailIcon,
   MenuIcon,
 } from "@heroicons/react/outline";
-import { SunIcon } from "@heroicons/react/outline";
-import Anchor from "./anchor";
 import Brand from "./brand";
 import { useContext, useState } from "react";
 import Button from "./button";
-import IconText from "./icon_text";
 import NavLink from "./nav_link";
 import ThemeContext from "./theme_context";
 import { useRouter } from "next/dist/client/router";
