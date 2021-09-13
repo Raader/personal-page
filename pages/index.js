@@ -12,7 +12,9 @@ export default function Home() {
               years."></meta>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
-        <Layout></Layout>
+        <Layout>
+          <h1 className="sr-only">Efe Ağca</h1>
+        </Layout>
       </ThemeContext.Provider>
     </>
   );
