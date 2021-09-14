@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Anchor from "./anchor";
+import ColoredLink from "./colored_link";
 import FormattedDate from "./formatted_date";
 import ThemeContext from "./theme_context";
 
@@ -20,9 +21,12 @@ export default function ArticleLink({ article, ...props }) {
         className="-my-4 "
       ></div>
 
-      <Anchor href={`/articles/${article.id}`} style={{ color: accentColor }}>
+      <ColoredLink
+        href={`/articles/${article.id}`}
+        style={{ color: accentColor }}
+      >
         Read More
-      </Anchor>
+      </ColoredLink>
     </div>
   );
 }
