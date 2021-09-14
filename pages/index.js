@@ -12,7 +12,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Personal Page | Efe Ağca</title>
+        <title>Efe Ağca | Personal Page, Portfolio And Blog</title>
         <meta
           name="description"
           content="I'm a self taught full stack developer who's been coding /
