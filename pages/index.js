@@ -29,10 +29,10 @@ export default function Home({ posts }) {
               </h1>
               <h2>About</h2>
               <p>
-                I'm a self taught full stack developer who's been coding /
+                {`I'm a self taught full stack developer who's been coding /
                 developing opens source apps and libraries myself for over 4
                 years. I love contributing to open source projects. I mainly use
-                the Javascript language.
+                the Javascript language.`}
               </p>
               <ColoredLink href="/about">Learn More About Me</ColoredLink>
             </div>
