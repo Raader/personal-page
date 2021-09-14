@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ArticleLink from "../components/article_link";
 import Card from "../components/card";
+import ColoredLink from "../components/colored_link";
 import Layout from "../components/layout";
 import OutlinedButton from "../components/outlined_button";
 import Prose from "../components/prose";
@@ -33,6 +34,7 @@ export default function Home({ posts }) {
                 years. I love contributing to open source projects. I mainly use
                 the Javascript language.
               </p>
+              <ColoredLink href="/about">Learn More About Me</ColoredLink>
             </div>
 
             <div>
@@ -78,6 +80,9 @@ export default function Home({ posts }) {
                   </ul>
                 </div>
               </div>
+              <ColoredLink href="/projects">
+                Take A Look At My Projects
+              </ColoredLink>
             </div>
           </Prose>
         </Layout>
