@@ -1,10 +1,13 @@
 import Head from "next/head";
+import ArticleLink from "../components/article_link";
 import Card from "../components/card";
 import Layout from "../components/layout";
+import OutlinedButton from "../components/outlined_button";
 import Prose from "../components/prose";
 import ThemeContext from "../components/theme_context";
+import { getAllPosts } from "../lib/posts";
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -18,22 +21,32 @@ export default function Home() {
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
-          <h1 className="sr-only">Efe Ağca</h1>
+          <Prose className="">
+            <div>
+              <h1 className="">
+                {`Hey There! I'm Efe Ağca. I make web apps and stuff.`}
+              </h1>
+              <h2>About</h2>
+              <p>
+                I'm a self taught full stack developer who's been coding /
+                developing opens source apps and libraries myself for over 4
+                years. I love contributing to open source projects. I mainly use
+                the Javascript language.
+              </p>
+            </div>
 
-          <Prose className="max-w-none">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h2 className="!mt-0">
-                  Hey There! I'm Efe. I make web apps and stuff.
-                </h2>
-                <Card className="text-blue-400">
-                  I'm a self taught full stack developer who's been coding /
-                  developing opens source apps and libraries myself for over 4
-                  years. I love contributing to open source projects. I mainly
-                  use the Javascript language.
-                </Card>
+            <div>
+              <h2 className="!mb-0">Recent Articles</h2>
+              <div className="flex flex-col">
+                {posts.slice(0, 2).map((article, index) => (
+                  <ArticleLink
+                    article={article}
+                    key={`article-${index}`}
+                  ></ArticleLink>
+                ))}
               </div>
             </div>
+
             <div>
               <h2>Skills</h2>
               <p>
@@ -71,4 +84,10 @@ export default function Home() {
       </ThemeContext.Provider>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = await getAllPosts();
+
+  return { props: { posts } };
 }
