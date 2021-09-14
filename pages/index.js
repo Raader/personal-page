@@ -20,7 +20,7 @@ export default function Home({ posts }) {
               years."
         ></meta>
       </Head>
-      <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
+      <ThemeContext.Provider value={{ accentColor: "#F87171" }}>
         <Layout>
           <Prose className="">
             <div>

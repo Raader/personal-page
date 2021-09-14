@@ -8,7 +8,7 @@ export default function ContactPage() {
       <Head>
         <title>Contact | Efe Ağca</title>
       </Head>
-      <ThemeContext.Provider value={{ accentColor: "#F87171" }}>
+      <ThemeContext.Provider value={{ accentColor: "#A78BFA" }}>
         <Layout></Layout>
       </ThemeContext.Provider>
     </>

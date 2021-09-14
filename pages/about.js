@@ -8,7 +8,7 @@ export default function AboutPage() {
       <Head>
         <title>About | Efe Ağca</title>
       </Head>
-      <ThemeContext.Provider value={{ accentColor: "#818CF8" }}>
+      <ThemeContext.Provider value={{ accentColor: "#FBBF24" }}>
         <Layout></Layout>
       </ThemeContext.Provider>
     </>

@@ -10,9 +10,12 @@ export default function Article({ post }) {
     <>
       <Head>
         <title>{post.title} | Efe Ağca</title>
-        <meta name="description" content={post.preview?.replace(/<p>|<\/p>/g,"")}></meta>
+        <meta
+          name="description"
+          content={post.preview?.replace(/<p>|<\/p>/g, "")}
+        ></meta>
       </Head>
-      <ThemeContext.Provider value={{ accentColor: "#FBBF24" }}>
+      <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
           <Prose>
             <h1>{post.title}</h1>

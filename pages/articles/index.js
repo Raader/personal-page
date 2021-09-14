@@ -11,7 +11,7 @@ export default function Articles({ posts }) {
       <Head>
         <title>Articles | Efe Ağca</title>
       </Head>
-      <ThemeContext.Provider value={{ accentColor: "#FBBF24" }}>
+      <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
           <Prose>
             <h1>Articles</h1>
