@@ -5,6 +5,7 @@ import ColoredLink from "../components/colored_link";
 import Layout from "../components/layout";
 import OutlinedButton from "../components/outlined_button";
 import Prose from "../components/prose";
+import Section from "../components/section";
 import ThemeContext from "../components/theme_context";
 import { getAllPosts } from "../lib/posts";
 
@@ -22,8 +23,8 @@ export default function Home({ posts }) {
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#F87171" }}>
         <Layout>
-          <Prose className="">
-            <div>
+          <Section>
+            <Prose>
               <h1 className="">
                 {`Hey There! I'm Efe Ağca. I make web apps and stuff.`}
               </h1>
@@ -35,10 +36,12 @@ export default function Home({ posts }) {
                 the Javascript language.`}
               </p>
               <ColoredLink href="/about">Learn More About Me</ColoredLink>
-            </div>
+            </Prose>
+          </Section>
 
-            <div>
-              <h2 className="!mb-0">Recent Articles</h2>
+          <Section className="bg-[#ebecee] dark:bg-[#151d30]">
+            <Prose>
+              <h2 className="!my-0">Recent Articles</h2>
               <div className="flex flex-col">
                 {posts.slice(0, 2).map((article, index) => (
                   <ArticleLink
@@ -47,9 +50,10 @@ export default function Home({ posts }) {
                   ></ArticleLink>
                 ))}
               </div>
-            </div>
-
-            <div>
+            </Prose>
+          </Section>
+          <Section>
+            <Prose>
               <h2>Skills</h2>
               <p>
                 I have various skills on both the backend and the frontend as
@@ -83,8 +87,8 @@ export default function Home({ posts }) {
               <ColoredLink href="/projects">
                 Take A Look At My Projects
               </ColoredLink>
-            </div>
-          </Prose>
+            </Prose>
+          </Section>
         </Layout>
       </ThemeContext.Provider>
     </>
