@@ -28,7 +28,6 @@ export default function Home({ posts }) {
               <h1 className="">
                 {`Hey There! I'm Efe Ağca. I make web apps and stuff.`}
               </h1>
-              <h2>About</h2>
               <p>
                 {`I'm a self taught full stack developer who's been coding /
                 developing opens source apps and libraries myself for over 4
