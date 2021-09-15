@@ -4,6 +4,7 @@ import Prose from "../../components/prose";
 import ThemeContext from "../../components/theme_context";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
+import Section from "../../components/section";
 
 export default function Article({ post }) {
   return (
@@ -17,13 +18,15 @@ export default function Article({ post }) {
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
-          <Prose>
-            <h1>{post.title}</h1>
-            <div className="-mt-8 mb-8">
-              <FormattedDate>{post.date}</FormattedDate>
-            </div>
-            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-          </Prose>
+          <Section>
+            <Prose>
+              <h1>{post.title}</h1>
+              <div className="-mt-8 mb-8">
+                <FormattedDate>{post.date}</FormattedDate>
+              </div>
+              <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            </Prose>
+          </Section>
         </Layout>
       </ThemeContext.Provider>
     </>
