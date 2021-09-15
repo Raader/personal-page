@@ -1,6 +1,6 @@
 ---
 title: How to Use React Hooks
-date: "2021-05-06"
+date: "2021-05-08"
 ---
 
 React hooks allows us to use state and other react features on functional components.

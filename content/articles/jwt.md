@@ -1,6 +1,6 @@
 ---
 title: JSON Web Tokens
-date: "2021-05-06"
+date: "2021-05-09"
 ---
 
 **JWT** is a industry standard method for authorizing. These tokens are basically cryted text which can be decoded. A token has signature that is unique to where its created. **Jsonwebtoken** is an npm package that is used to sign and verify tokens.

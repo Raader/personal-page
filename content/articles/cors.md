@@ -1,6 +1,6 @@
 ---
 title: Understanding And Using Cors
-date: "2021-05-06"
+date: "2021-05-07"
 ---
 
 As a beginner i was in the process of making my first full stack app and right from the start i hit a unknown barrier CORS. I didn't know what it meaned but there was something about CORS in the error logs. I researched for hours trying to fix this issue. I eventually fixed it but didn't quite understand it right until now.
