@@ -4,6 +4,7 @@ import ThemeContext from "../../components/theme_context";
 import { getAllPosts } from "../../lib/posts";
 import Head from "next/head";
 import ArticleLink from "../../components/article_link";
+import Section from "../../components/section";
 
 export default function Articles({ posts }) {
   return (
@@ -13,14 +14,19 @@ export default function Articles({ posts }) {
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
-          <Prose>
-            <h1>Articles</h1>
-            <div className="-mt-8">
-              {posts.map((post, index) => (
-                <ArticleLink key={`post-${index}`} article={post}></ArticleLink>
-              ))}
-            </div>
-          </Prose>
+          <Section>
+            <Prose>
+              <h1>Articles</h1>
+              <div className="-mt-8">
+                {posts.map((post, index) => (
+                  <ArticleLink
+                    key={`post-${index}`}
+                    article={post}
+                  ></ArticleLink>
+                ))}
+              </div>
+            </Prose>
+          </Section>
         </Layout>
       </ThemeContext.Provider>
     </>
