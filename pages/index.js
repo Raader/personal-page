@@ -16,7 +16,7 @@ export default function Home({ posts }) {
         <title>Efe Ağca | Personal Page, Portfolio And Blog</title>
         <meta
           name="description"
-          content="I'm a self taught full stack developer who's been coding /
+          content="I'm Efe Ağca, a self taught full stack developer who's been coding /
               developing opens source apps and libraries myself for over 4
               years."
         ></meta>
