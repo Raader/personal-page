@@ -1,4 +1,4 @@
-import { readAllContentIds } from "../lib/content";
+import { getAllPostIds } from "../lib/posts";
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +36,7 @@ export default function SiteMap() {
 }
 
 export async function getServerSideProps({ res }) {
-  const posts = await readAllContentIds();
+  const posts = getAllPostIds();
   const sitemap = generateSiteMap(posts);
 
   if (res) {
