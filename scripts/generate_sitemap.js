@@ -41,7 +41,7 @@ function generateSiteMap() {
 function buildSiteMap() {
   const sitemap = generateSiteMap();
 
-  writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
+  writeFileSync("public/sitemap.xml", sitemap);
 }
 
 buildSiteMap();
