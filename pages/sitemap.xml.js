@@ -1,4 +1,4 @@
-import { getAllPostIds } from "../lib/posts";
+import fetch from "node-fetch";
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -35,8 +35,12 @@ export default function SiteMap() {
   return null;
 }
 
-export async function getServerSideProps({ res }) {
-  const posts = getAllPostIds();
+export async function getServerSideProps({ req, res }) {
+  const posts = await fetch(
+    `${req.connection.encrypted ? "https" : "http"}://${
+      req.headers.host
+    }/cache/articles.json`
+  ).then((res) => res.json());
   const sitemap = generateSiteMap(posts);
 
   if (res) {
