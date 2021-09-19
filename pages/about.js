@@ -30,7 +30,7 @@ export default function AboutPage() {
                 development. I prefer learning with making, so i made dozens of
                 web apps along the way. Most of them i never published but they
                 all thought me things i couldn't learn by reading books or
-                watching tutorials. In web development there is astounding
+                watching tutorials. In web development there is an astounding
                 amount of things to learn and i still learn something new
                 everyday.`}
               </p>
