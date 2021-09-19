@@ -20,6 +20,20 @@ export default function AboutPage() {
                 coding / developing opens source apps and libraries myself for
                 over 4 years.`}
               </p>
+              <p>
+                {`I started my programming journey with python like most people
+                do. After learning the basics i moved on to learn c# for game
+                development but after trying to develop games for half a year, i
+                decided game development just wasn't for me. When i looked into
+                web development, I was immediately hooked. I loved the idea that
+                everything was cross platform. I continued to learn about web
+                development. I prefer learning with making, so i made dozens of
+                web apps along the way. Most of them i never published but they
+                all thought me things i couldn't learn by reading books or
+                watching tutorials. In web development there is astounding
+                amount of things to learn and i still learn something new
+                everyday.`}
+              </p>
             </Prose>
           </Section>
         </Layout>
