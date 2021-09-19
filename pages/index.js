@@ -55,7 +55,7 @@ export default function Home({ posts }) {
             <Prose>
               <h2>Skills</h2>
               <p>
-                I have various skills on both the backend and the frontend as
+                I have various skills on both the backend and the frontend as a
                 full stack web developer. Here is a list of them.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 items-start">
