@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import Section from "../components/section";
 import Prose from "../components/prose";
+import ColoredLink from "../components/colored_link";
 
 export default function AboutPage() {
   return (
@@ -40,6 +41,17 @@ export default function AboutPage() {
                 stuff. I try to contribute to open source whenever i find time.
                 All of my personal projects are open source, including this
                 website.
+              </p>
+              <p>
+                <ColoredLink href="https://github.com/Raader">
+                  My Github
+                </ColoredLink>
+              </p>
+
+              <p>
+                <ColoredLink href="https://stackoverflow.com/users/13301648/raader">
+                  My StackOverflow
+                </ColoredLink>
               </p>
             </Prose>
           </Section>
