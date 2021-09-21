@@ -15,10 +15,10 @@ export default function ContactPage() {
         <Layout>
           <Section>
             <Prose>
-              <h1 className="!mb-0">Contact Me</h1>
+              <h1 className="">Contact Me</h1>
               <p>Feel free to contact me for whatever reason.</p>
               <form
-                className="space-y-4 max-w-lg"
+                className="space-y-6 max-w-lg"
                 action="https://formspree.io/f/xayabgnl"
                 method="POST"
               >
