@@ -35,7 +35,6 @@ export default function AboutPage() {
                 amount of things to learn and i still learn something new
                 everyday.`}
               </p>
-
               <p>
                 I love open source programs. I vastly prefer it over proprietary
                 stuff. I try to contribute to open source whenever i find time.
@@ -47,7 +46,6 @@ export default function AboutPage() {
                   My Github
                 </ColoredLink>
               </p>
-
               <p>
                 <ColoredLink href="https://stackoverflow.com/users/13301648/raader">
                   My StackOverflow
