@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ThemeContext from "./theme_context";
 
-export default function FormattedDate({ children, className, ...props }) {
+export default function FormattedDate({ children, className, long, ...props }) {
   const { accentColor } = useContext(ThemeContext);
 
   return (
@@ -10,11 +10,16 @@ export default function FormattedDate({ children, className, ...props }) {
       className={`whitespace-nowrap ${className}`}
       {...props}
     >
-      {new Date(children).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      })}
+      {new Date(children).toLocaleDateString(
+        "en-US",
+        long
+          ? { weekday: "long", year: "numeric", month: "long", day: "numeric" }
+          : {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            }
+      )}
     </p>
   );
 }
