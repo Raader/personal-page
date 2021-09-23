@@ -1,7 +1,7 @@
 import Layout from "../../components/layout";
 import Prose from "../../components/prose";
 import ThemeContext from "../../components/theme_context";
-import { getAllPosts } from "../../lib/posts";
+import { getAllPostPreviews } from "../../lib/posts";
 import Head from "next/head";
 import ArticleLink from "../../components/article_link";
 import Section from "../../components/section";
@@ -34,7 +34,7 @@ export default function Articles({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts();
+  const posts = await getAllPostPreviews();
 
   return { props: { posts } };
 }
