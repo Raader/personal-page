@@ -23,7 +23,7 @@ export default function Article({ post }) {
             <Prose>
               <h1>{post.title}</h1>
               <div className="-mt-8 mb-8">
-                <FormattedDate>{post.date}</FormattedDate>
+                <FormattedDate long>{post.date}</FormattedDate>
               </div>
               <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
             </Prose>
