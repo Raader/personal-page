@@ -17,7 +17,7 @@ export default function ArticleLink({ article, ...props }) {
       </div>
 
       <div
-        dangerouslySetInnerHTML={{ __html: article.preview }}
+        dangerouslySetInnerHTML={{ __html: article.content }}
         className="-my-4 "
       ></div>
 
