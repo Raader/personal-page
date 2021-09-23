@@ -7,7 +7,7 @@ import OutlinedButton from "../components/outlined_button";
 import Prose from "../components/prose";
 import Section from "../components/section";
 import ThemeContext from "../components/theme_context";
-import { getAllPostPreviews, getAllPosts } from "../lib/posts";
+import { getAllPostPreviews } from "../lib/posts";
 
 export default function Home({ posts }) {
   return (
