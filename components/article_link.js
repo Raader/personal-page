@@ -9,11 +9,11 @@ export default function ArticleLink({ article, ...props }) {
 
   return (
     <div {...props}>
-      <div className="flex items-baseline flex-nowrap justify-between">
+      <div className="flex items-baseline flex-col md:flex-row md:justify-between">
         <Anchor href={`/articles/${article.id}`}>
-          <h3>{article.title}</h3>
+          <h3 className="!mb-0">{article.title}</h3>
         </Anchor>
-        <FormattedDate>{article.date}</FormattedDate>
+        <FormattedDate className="!m-0">{article.date}</FormattedDate>
       </div>
 
       <div
