@@ -7,7 +7,7 @@ import OutlinedButton from "../components/outlined_button";
 import Prose from "../components/prose";
 import Section from "../components/section";
 import ThemeContext from "../components/theme_context";
-import { getAllPosts } from "../lib/posts";
+import { getAllPostPreviews, getAllPosts } from "../lib/posts";
 
 export default function Home({ posts }) {
   return (
@@ -95,7 +95,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts();
+  const posts = await getAllPostPreviews();
 
   return { props: { posts } };
 }
