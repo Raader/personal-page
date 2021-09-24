@@ -10,6 +10,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Contact | Efe Ağca</title>
+        <meta name="description" content="Use this form to contact me."></meta>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#A78BFA" }}>
         <Layout>
