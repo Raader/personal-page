@@ -10,6 +10,7 @@ export default function AboutPage() {
     <>
       <Head>
         <title>About | Efe Ağca</title>
+        <meta name="description" content="Everything about me."></meta>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#FBBF24" }}>
         <Layout>
