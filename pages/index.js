@@ -29,7 +29,7 @@ export default function Home({ posts }) {
                 {`Hey There! I'm Efe Ağca. I make web apps and stuff.`}
               </h1>
               <p>
-                {`I'm a self taught full stack developer who's been coding /
+                {`I'm Efe Ağca, a self taught full stack developer who's been coding /
                 developing opens source apps and libraries myself for over 4
                 years. I love contributing to open source projects. I mainly use
                 the Javascript language.`}
