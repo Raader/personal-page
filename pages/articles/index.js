@@ -11,6 +11,10 @@ export default function Articles({ posts }) {
     <>
       <Head>
         <title>Articles | Efe Ağca</title>
+        <meta
+          name="description"
+          content="All of my articles / blog posts."
+        ></meta>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#60A5FA" }}>
         <Layout>
