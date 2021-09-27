@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             <Prose>
               <h1>My Projects</h1>
               <p>
-                These are my personal side projects i made throughout my
+                These are all my personal side projects i made throughout my
                 learning journey and they are all open source.
               </p>
             </Prose>
