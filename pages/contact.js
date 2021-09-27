@@ -17,7 +17,11 @@ export default function ContactPage() {
           <Section>
             <Prose>
               <h1 className="">Contact Me</h1>
-              <p>Feel free to contact me for whatever reason.</p>
+              <p>
+                This is a submission - contact form. You can use this form to
+                reach out to me for job offers, to ask a question or to just get
+                acquainted. I usually respond within 24 hours.
+              </p>
               <form
                 className="space-y-6 max-w-lg"
                 action="https://formspree.io/f/xayabgnl"
