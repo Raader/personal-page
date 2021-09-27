@@ -16,7 +16,7 @@ export default function ContactPage() {
         <Layout>
           <Section>
             <Prose>
-              <h1 className="">Contact Me</h1>
+              <h1>Contact Me</h1>
               <p>
                 This is a submission - contact form. You can use this form to
                 reach out to me for job offers, to ask a question or to just get
