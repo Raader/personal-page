@@ -1,6 +1,8 @@
 import Layout from "../../components/layout";
 import ThemeContext from "../../components/theme_context";
 import Head from "next/head";
+import Section from "../../components/section";
+import Prose from "../../components/prose";
 
 export default function ProjectsPage() {
   return (
@@ -13,7 +15,17 @@ export default function ProjectsPage() {
         ></meta>
       </Head>
       <ThemeContext.Provider value={{ accentColor: "#34D399" }}>
-        <Layout></Layout>
+        <Layout>
+          <Section>
+            <Prose>
+              <h1>My Projects</h1>
+              <p>
+                These are my personal side projects i made throughout my
+                learning journey and they are all open source.
+              </p>
+            </Prose>
+          </Section>
+        </Layout>
       </ThemeContext.Provider>
     </>
   );
