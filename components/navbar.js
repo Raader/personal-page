@@ -13,6 +13,7 @@ import NavLink from "./nav_link";
 import ThemeContext from "./theme_context";
 import { useRouter } from "next/dist/client/router";
 import LightSwitch from "./light_switch";
+import Collapse from "./collapse";
 
 const navigationLinks = [
   {
@@ -84,23 +85,22 @@ export default function Navbar({ children }) {
           </Button>
         </div>
       </div>
-      {!collapsed ? (
-        <div className="w-screen flex flex-col text-xl -ml-4 -mb-4 mt-4">
-          {navigationLinks.map((link, index) => (
-            <NavLink
-              href={link.href}
-              icon={link.icon}
-              key={`drop-nav-link-${index}`}
-              selected={isOnPage(link.href)}
-              className="p-2 odd:bg-[#ebecee] dark:odd:bg-[#151d30]"
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <Collapse
+        collapsed={collapsed}
+        className="w-screen flex flex-col text-xl -ml-4 -mb-4 mt-4"
+      >
+        {navigationLinks.map((link, index) => (
+          <NavLink
+            href={link.href}
+            icon={link.icon}
+            key={`drop-nav-link-${index}`}
+            selected={isOnPage(link.href)}
+            className="p-2 odd:bg-[#ebecee] dark:odd:bg-[#151d30]"
+          >
+            {link.name}
+          </NavLink>
+        ))}
+      </Collapse>
     </nav>
   );
 }
