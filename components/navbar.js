@@ -55,27 +55,15 @@ export default function Navbar({ children }) {
   const isOnPage = (path) =>
     router.pathname === path ||
     (path !== "/" && router.pathname.startsWith(path));
+
   return (
     <nav
       className={`w-full p-4 md:p-5 xl:p-6 border-b-4 mb-4 xl:mb-10`}
       style={{ borderColor: accentColor }}
     >
-      <div className="container mx-auto flex items-center">
+      <div className="container mx-auto flex items-center flex-wrap">
         <Brand></Brand>
-        <div className="mx-16 hidden md:flex md:space-x-8 text-lg xl:text-xl">
-          {navigationLinks.map((link, index) => (
-            <NavLink
-              href={link.href}
-              icon={link.icon}
-              key={`nav-link-${index}`}
-              selected={isOnPage(link.href)}
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </div>
-
-        <div className="ml-auto flex space-x-4">
+        <div className="ml-auto flex space-x-4 md:order-3">
           <LightSwitch></LightSwitch>
           <Button
             className="md:hidden"
@@ -84,23 +72,23 @@ export default function Navbar({ children }) {
             <MenuIcon className="w-8 h-8"></MenuIcon>
           </Button>
         </div>
+        <Collapse
+          collapsed={collapsed}
+          className="w-screen flex flex-col text-xl -mr-4 -ml-4 -mb-4 mt-4 md:w-auto md:my-0 md:mt-0 md:flex-row md:items-center md:mx-16 md:space-x-8 md:text-lg xl:text-xl md:order-2"
+        >
+          {navigationLinks.map((link, index) => (
+            <NavLink
+              href={link.href}
+              icon={link.icon}
+              key={`drop-nav-link-${index}`}
+              selected={isOnPage(link.href)}
+              className="p-2 md:p-0 odd:bg-[#ebecee] dark:odd:bg-[#151d30] md:odd:bg-transparent bg-transparent"
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </Collapse>
       </div>
-      <Collapse
-        collapsed={collapsed}
-        className="w-screen flex flex-col text-xl -ml-4 -mb-4 mt-4"
-      >
-        {navigationLinks.map((link, index) => (
-          <NavLink
-            href={link.href}
-            icon={link.icon}
-            key={`drop-nav-link-${index}`}
-            selected={isOnPage(link.href)}
-            className="p-2 odd:bg-[#ebecee] dark:odd:bg-[#151d30]"
-          >
-            {link.name}
-          </NavLink>
-        ))}
-      </Collapse>
     </nav>
   );
 }
