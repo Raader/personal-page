@@ -42,6 +42,7 @@ export default function AboutPage() {
                 All of my personal projects are open source, including this
                 website.
               </p>
+              <h2>Social Links</h2>
               <p>
                 <ColoredLink href="https://github.com/Raader">
                   My Github
