@@ -82,7 +82,7 @@ export default function Navbar({ children }) {
               icon={link.icon}
               key={`drop-nav-link-${index}`}
               selected={isOnPage(link.href)}
-              className="p-2 md:p-0 odd:bg-[#ebecee] dark:odd:bg-[#151d30] md:odd:bg-transparent bg-transparent"
+              className="p-2 md:p-0 odd:bg-[#ebecee] dark:odd:bg-[#151d30] md:!bg-transparent"
             >
               {link.name}
             </NavLink>
